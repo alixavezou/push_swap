@@ -13,6 +13,7 @@ NAME = push_swap
 
 #SOURCES AND OBJECTS
 SRC_NAME =	push_swap.c \
+			parse.c \
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 

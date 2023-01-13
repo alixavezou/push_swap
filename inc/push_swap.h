@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:52:43 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/10 17:02:20 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/13 17:12:50 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,15 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <ctype.h>
+
+typedef struct s_stack t_stack;
+struct	s_stack
+{
+    int *tab_a;
+    int size;
+};
+
+int ft_parse_tab_a(int ac, char **av);
+int ft_allocate_tab_a(int ac, char **av, t_stack *stack);
 
 #endif
