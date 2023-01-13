@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:52:43 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/13 17:12:50 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/13 19:18:43 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,12 @@ struct	s_stack
     int size;
 };
 
+// Define values
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
+
 int ft_parse_tab_a(int ac, char **av);
 int ft_allocate_tab_a(int ac, char **av, t_stack *stack);
+int ft_wrong_arguments(int ac, char **av);
 
 #endif

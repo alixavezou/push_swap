@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:51:57 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/13 17:12:40 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/13 19:21:48 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,17 @@ int ft_parse_tab_a(int ac, char **av)
     int j;
 
     i = 1;
-    if (ac <= 1)
-    {
-        ft_printf("Error\nWrong nb of arguments!\n");
-        return (1);
-    }
+    ft_wrong_arguments(ac, av);
     while (av[i])
     {
         j = 0;
+        if (av[i][j] == '-' && av[i][j + 1])
+            j++;
+        if (ft_atoi(av[i]) >= INT_MAX || ft_atoi(av[i]) <= INT_MIN)
+        {
+            ft_printf("Argument cannot exceed INT_MAX and/or INT_MIN!\n");
+                return (1);
+        }
         while (av[i][j])
         {
             if (!(ft_isdigit(av[i][j])))
@@ -33,8 +36,7 @@ int ft_parse_tab_a(int ac, char **av)
                 ft_printf("Arguments must be of type int!\n");
                 return (1);
             }
-            else
-                j++;
+            j++;
         }
         i++;
     }
@@ -44,8 +46,8 @@ int ft_parse_tab_a(int ac, char **av)
 int ft_allocate_tab_a(int ac, char **av, t_stack *stack)
 {
     int i;
-    
-    stack->tab_a = (int*)malloc((stack->size) * sizeof(int));
+
+    stack->tab_a = (int *)malloc((stack->size) * sizeof(int));
     if (!stack->tab_a)
     {
         free(stack->tab_a);
@@ -60,3 +62,15 @@ int ft_allocate_tab_a(int ac, char **av, t_stack *stack)
     free(stack->tab_a);
     return (0);
 }
+
+int ft_wrong_arguments(int ac, char **av)
+{
+    (void)av;
+    if (ac <= 1)
+    {
+        ft_printf("Error\nWrong nb of arguments!\n");
+        return (1);
+    }
+    return (0);
+}
+
