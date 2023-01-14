@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:52:43 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/13 19:18:43 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/14 15:11:35 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ struct	s_stack
 int ft_parse_tab_a(int ac, char **av);
 int ft_allocate_tab_a(int ac, char **av, t_stack *stack);
 int ft_wrong_arguments(int ac, char **av);
+int ft_check_duplicate_nb(int ac, char **av);
+int ft_is_sorted_yet(t_stack *stack);
 
 #endif
