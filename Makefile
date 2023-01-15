@@ -15,6 +15,9 @@ NAME = push_swap
 SRC_NAME =	push_swap.c \
 			parse.c \
 			is_tab_sorted.c \
+			initializing_operations.c \
+			allocate_tab_b.c \
+			src_utils.c \
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
