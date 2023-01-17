@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   src_utils.c                                        :+:      :+:    :+:   */
+/*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/15 02:05:23 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/16 16:43:47 by aavezou          ###   ########.fr       */
+/*   Created: 2023/01/16 21:02:36 by aavezou           #+#    #+#             */
+/*   Updated: 2023/01/16 21:12:54 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_print_tab(int *tab, int size_tab, char c)
+int ft_get_int_max(t_stack *stack) 
 {
-    int i;
-    for (i = 0; i < size_tab; i++) 
-    {
-        printf("tab %c = %d\n", c, tab[i]);
-    }
-    printf("\n");
+  int   max;
+  int   i;
+  
+  max = stack->tab_a[0];
+  i = 1;
+  while (i <= stack->size_tab_a - 1)
+  {
+    if (stack->tab_a[i] > max)
+      max = stack->tab_a[i];
+    i++;
+  }
+  ft_printf("int max = %d\n", max);
+  return (max);
 }

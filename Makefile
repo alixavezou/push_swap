@@ -16,7 +16,10 @@ SRC_NAME =	push_swap.c \
 			parse.c \
 			is_tab_sorted.c \
 			initializing_operations.c \
+			initializing_operations2.c \
+			initializing_operations3.c \
 			allocate_tab_b.c \
+			algo.c \
 			src_utils.c \
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
