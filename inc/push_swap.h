@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:52:43 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/16 21:07:19 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/18 20:17:12 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int ft_reverse_rotate_a_and_b(t_stack *stack);
 int ft_push_b(t_stack *stack);
 int ft_push_a(t_stack *stack);
 int ft_get_int_max(t_stack *stack);
+int ft_get_int_min(t_stack *stack);
+int ft_modulo(t_stack *stack);
 
 void ft_print_tab(int *tab, int size_tab, char c);
 

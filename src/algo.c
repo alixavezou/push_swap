@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 21:02:36 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/16 21:12:54 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/18 20:16:59 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,40 @@ int ft_get_int_max(t_stack *stack)
       max = stack->tab_a[i];
     i++;
   }
-  ft_printf("int max = %d\n", max);
   return (max);
 }
+
+int ft_get_int_min(t_stack *stack)
+{
+    int min;
+    int i;
+
+    min = stack->tab_a[0];
+    i = 1;
+    while (i <= stack->size_tab_a - 1)
+    {
+        if (stack->tab_a[i] < min)
+            min = stack->tab_a[i];
+        i++;
+    }
+    return (min);
+}
+
+int ft_modulo(t_stack *stack)
+{
+  int i;
+  int tempo;
+
+  i = stack->tab_a[0];
+  tempo = 0;
+  if (i < 0)
+    i = i * (-1);
+  while (i >= 10)
+  {
+    tempo = i % 10;
+    i = i / 10;
+  }
+  i = i % 10;
+  return (0);
+}
+
