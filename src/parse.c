@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:51:57 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/14 15:10:21 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/22 20:24:34 by alixavezou       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int ft_parse_tab_a(int ac, char **av)
         j = 0;
         if (av[i][j] == '-' && av[i][j + 1])
             j++;
-        if (ft_atoi(av[i]) >= INT_MAX || ft_atoi(av[i]) <= INT_MIN)
+        if (ft_long_atoi(av[i]) > INT_MAX || ft_long_atoi(av[i]) < INT_MIN || ft_strlen(av[i]) > 11)
         {
             ft_printf("Argument cannot exceed INT_MAX and/or INT_MIN!\n");
             return (1);
@@ -51,7 +51,7 @@ int ft_parse_tab_a(int ac, char **av)
 int ft_wrong_arguments(int ac, char **av)
 {
     (void)av;
-    if (ac <= 1)
+    if (ac == 1)
     {
         ft_printf("Error\nWrong nb of arguments!\n");
         return (1);

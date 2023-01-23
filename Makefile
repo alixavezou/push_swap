@@ -15,11 +15,15 @@ NAME = push_swap
 SRC_NAME =	push_swap.c \
 			parse.c \
 			is_tab_sorted.c \
+			initialize_values.c \
 			initializing_operations.c \
 			initializing_operations2.c \
 			initializing_operations3.c \
+			small_arrays.c \
+			small_arrays2.c \
 			allocate_tab_b.c \
 			algo.c \
+			handle_memory.c \
 			src_utils.c \
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
@@ -35,7 +39,7 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror -g3 -I inc
 
 #LIBRARY
-LIBFT  = ./libft/libft.a -I libft/inc 
+LIBFT  = ./libft/libft.a -I libft/inc
 
 all: link $(NAME)
 

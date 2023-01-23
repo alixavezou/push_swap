@@ -3,28 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 21:02:36 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/16 21:12:54 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:58:58 by alixavezou       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_get_int_max(t_stack *stack) 
+int ft_handle_negative(t_stack *stack)
 {
-  int   max;
-  int   i;
-  
-  max = stack->tab_a[0];
-  i = 1;
-  while (i <= stack->size_tab_a - 1)
+  int i;
+  int j;
+  int count;
+
+  i = 0;
+  while (i < stack->size_tab_a)
   {
-    if (stack->tab_a[i] > max)
-      max = stack->tab_a[i];
+    j = 0;
+    count = 0;
+    while (j < stack->size_tab_a)
+    {
+      if (stack->tab_a[i] > stack->tab_a[j])
+      {
+        count++;
+      }
+      j++;
+    }
+    stack->cpy_tab_a[i] = count;
     i++;
   }
-  ft_printf("int max = %d\n", max);
-  return (max);
+  free(stack->tab_a);
+  stack->tab_a = stack->cpy_tab_a;
+  return (0);
+}
+
+void ft_radix(t_stack *stack)
+{
+  int i;
+  int size;
+
+  i = 0;
+  while (i < 32 && ft_stack_sorted(stack))
+  {
+    size = stack->size_tab_a;
+    while (size--)
+    {
+      if (!(stack->tab_a[0] >> i & 1))
+      {
+        if (size)
+        {
+          ft_push_b(stack);
+        }
+      }
+      else
+        ft_rotate_a(stack);
+    }
+    while (!(ft_push_a(stack)))
+      ;
+    i++;
+  }
 }

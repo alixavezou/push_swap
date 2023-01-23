@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   initialize_values.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 16:51:02 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/23 20:52:39 by alixavezou       ###   ########.fr       */
+/*   Created: 2023/01/23 18:22:15 by alixavezou        #+#    #+#             */
+/*   Updated: 2023/01/23 18:28:23 by alixavezou       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	ft_initialize_values(t_stack *stack, int ac, char **av)
 {
-    t_stack stack;
-
-    if (ac == 2)
-        return (1);
-    if (ft_parse_tab_a(ac, av))
-        return (1);
-    ft_is_sorted_yet(ac, av);
-    ft_initialize_values(&stack, ac, av);
-    ft_allocate_tab_a(ac, av, &stack);
-    ft_allocate_tab_b(&stack);
-    ft_allocate_copy_a(&stack);
-    ft_handle_negative(&stack);
-    ft_small_arrays(&stack);
-    ft_radix(&stack);
-    return (0);
+    (void)av;
+	stack->size = ac - 1;
+    stack->size_tab_a = ac - 1;
+    stack->size_tab_b = 0;
+    stack->size_cpy = 0;
 }

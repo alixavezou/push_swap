@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   is_tab_sorted.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:10:50 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/14 18:43:11 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/22 21:02:26 by alixavezou       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int ft_is_sorted_yet(int ac, char **av)
     int nb2;
 
     i = 1;
-    //je veux partir du debut de mon tableau et checker si l'argument d'apres est + grand que celui d'avant
-    //auquel cas, ca veut dire que mon tableau n'est pas trie dans l'ordre
     while (av[i])
     {
         nb1 = ft_atoi(av[i]);
@@ -40,5 +38,24 @@ int ft_is_sorted_yet(int ac, char **av)
         i++;
     }
     ft_printf("Array is already sorted in the ascending nb!\n");
+    return (0);
+}
+
+int ft_stack_sorted(t_stack *stack)
+{
+    int i;
+    int j;
+
+    i = 0;
+    j = i + 1;
+    while (stack->size_tab_a > j)
+    {
+        if (stack->tab_a[i] > stack->tab_a[j])
+        {
+            return (1);
+        }
+        j++;
+        i++;
+    }
     return (0);
 }
