@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:52:43 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/23 23:05:30 by alixavezou       ###   ########.fr       */
+/*   Updated: 2023/01/24 15:03:42 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int     ft_allocate_tab_a(int ac, char **av, t_stack *stack);
 int     ft_allocate_tab_b(t_stack *stack);
 int     ft_allocate_copy_a(t_stack *stack);
 int     ft_wrong_arguments(int ac, char **av);
+int     ft_check_type_of_args(int ac, char **av);
 int     ft_check_duplicate_nb(int ac, char **av);
 int     ft_is_sorted_yet(int ac, char **av);
 int     ft_swap_a(t_stack *stack);

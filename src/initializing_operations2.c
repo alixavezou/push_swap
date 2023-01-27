@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   initializing_operations2.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 14:28:54 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/22 21:27:44 by alixavezou       ###   ########.fr       */
+/*   Updated: 2023/01/23 23:14:06 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

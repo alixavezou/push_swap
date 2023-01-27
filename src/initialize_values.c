@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   initialize_values.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:22:15 by alixavezou        #+#    #+#             */
-/*   Updated: 2023/01/23 18:28:23 by alixavezou       ###   ########.fr       */
+/*   Updated: 2023/01/23 23:13:53 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
