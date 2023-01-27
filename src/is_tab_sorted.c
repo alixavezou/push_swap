@@ -6,13 +6,12 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:10:50 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/23 23:14:16 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 19:00:12 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// ici je veux d'abord checker si mon tableau est deja trie
 int ft_is_sorted_yet(int ac, char **av)
 {
     (void)ac;
@@ -37,7 +36,8 @@ int ft_is_sorted_yet(int ac, char **av)
         }
         i++;
     }
-    ft_printf("Array is already sorted in the ascending nb!\n");
+    ft_printf("Error\nArray is already sorted in the ascending nb!\n");
+    exit (1);
     return (0);
 }
 
@@ -52,10 +52,10 @@ int ft_stack_sorted(t_stack *stack)
     {
         if (stack->tab_a[i] > stack->tab_a[j])
         {
-            return (1);
+            return (0);
         }
         j++;
         i++;
     }
-    return (0);
+    return (1);
 }

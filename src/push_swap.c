@@ -6,13 +6,13 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:51:02 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/24 14:56:28 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 19:09:13 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+int main(int ac, char **av)
 {
     t_stack stack;
 
@@ -26,5 +26,6 @@ int	main(int ac, char **av)
     ft_handle_negative(&stack);
     ft_small_arrays(&stack);
     ft_radix(&stack);
+    ft_free_three_arrays(&stack);
     return (0);
 }

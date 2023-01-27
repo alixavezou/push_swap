@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:51:57 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/27 13:36:32 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 19:00:20 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int ft_parse_tab_a(int ac, char **av)
     {
         if (ft_long_atoi(av[i]) > INT_MAX || ft_long_atoi(av[i]) < INT_MIN || ft_strlen(av[i]) > 11)
         {
-            ft_printf("Argument cannot exceed INT_MAX and/or INT_MIN!\n");
+            ft_printf("Error\nArgument cannot exceed INT_MAX and/or INT_MIN!\n");
             return (1);
         }
         if (ft_check_duplicate_nb(ac, av) == 1)
@@ -42,7 +42,7 @@ int ft_wrong_arguments(int ac, char **av)
     if (ac == 1 || ac == 2)
     {
         ft_printf("Error\nWrong nb of arguments!\n");
-        return (1);
+        exit (1);
     }
     return (0);
 }
@@ -64,7 +64,7 @@ int ft_check_type_of_args(int ac, char **av)
         {
             if (!(ft_isdigit(av[i][j])))
             {
-                ft_printf("Arguments must be of type int!\n");
+                ft_printf("Error\nArguments must be of type int!\n");
                 exit (1);
             }
             j++;

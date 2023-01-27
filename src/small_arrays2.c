@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 20:57:02 by alixavezou        #+#    #+#             */
-/*   Updated: 2023/01/23 23:13:36 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 18:15:28 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ int ft_five_args(t_stack *stack)
 	ft_three_args(stack);
 	ft_push_a(stack);
 	ft_push_a(stack);
-	ft_print_tab(stack->tab_a, stack->size_tab_a, 'a');
     return (1);
 }
 
@@ -88,6 +87,5 @@ int	ft_check_one(t_stack *stack)
 		ft_reverse_rotate_a(stack);
 		ft_push_b(stack);
 	}
-	ft_free_all(stack);
 	return (1);
 }

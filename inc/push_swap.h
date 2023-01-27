@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:52:43 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/24 15:03:42 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 19:22:08 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,16 +62,13 @@ int	    ft_small_arrays(t_stack *stack);
 int	    ft_two_args(t_stack *stack);
 int     ft_three_args(t_stack *stack);
 int     ft_five_args(t_stack *stack);
-int	    ft_free_two_arrays(t_stack *stack);
-int	    ft_free_three_arrays(t_stack *stack);
 int	    ft_four_args(t_stack *stack);
-int	    ft_free_all(t_stack *stack);
 int	    ft_check_one(t_stack *stack);
 
 long	ft_long_atoi(const char *str);
 
 void    ft_radix(t_stack *stack);
-void    ft_print_tab(int *tab, int size_tab, char c);
 void	ft_initialize_values(t_stack *stack, int ac, char **av);
+void    ft_free_three_arrays(t_stack *stack);
 
 #endif

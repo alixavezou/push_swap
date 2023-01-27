@@ -6,21 +6,11 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 02:05:23 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/23 23:13:41 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 19:22:37 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void ft_print_tab(int *tab, int size_tab, char c)
-{
-    int i;
-    for (i = 0; i < size_tab; i++)
-    {
-        printf("tab %c = %d\n", c, tab[i]);
-    }
-    printf("\n");
-}
 
 long	ft_long_atoi(const char *str)
 {

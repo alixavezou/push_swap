@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 21:02:36 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/23 23:13:16 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 14:04:16 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void ft_radix(t_stack *stack)
   int size;
 
   i = 0;
-  while (i < 32 && ft_stack_sorted(stack))
+  while (i < 32 && !ft_stack_sorted(stack))
   {
     size = stack->size_tab_a;
     while (size--)

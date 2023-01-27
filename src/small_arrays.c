@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:52:13 by alixavezou        #+#    #+#             */
-/*   Updated: 2023/01/23 23:13:32 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/27 17:40:22 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	ft_two_args(t_stack *stack)
 	if (stack->tab_a[i] > stack->tab_b[j])
 		ft_swap_a(stack);
 	return (1);
-	ft_free_all(stack);
 }
 
 int ft_three_args(t_stack *stack)
@@ -64,7 +63,6 @@ int ft_three_args(t_stack *stack)
     else if (top < middle && middle > bottom && top > bottom)
         ft_reverse_rotate_a(stack);
     return (1);
-	ft_free_all(stack);
 }
 
 int	ft_four_args(t_stack *stack)
@@ -102,5 +100,4 @@ int	ft_four_args(t_stack *stack)
 	ft_push_a(stack);
 	ft_print_tab(stack->tab_a, stack->size_tab_a, 'a');
 	return (1);
-	ft_free_all(stack);
 }
