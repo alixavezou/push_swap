@@ -6,11 +6,47 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 20:57:02 by alixavezou        #+#    #+#             */
-/*   Updated: 2023/01/27 18:15:28 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/30 14:26:25 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_four_args(t_stack *stack)
+{
+	int	first;
+	int	second;
+	int	third;
+	int	fourth;
+
+	if (stack->size_tab_a != 4)
+        return (0);
+    first = stack->tab_a[0];
+    second = stack->tab_a[1];
+    third = stack->tab_a[2];
+    fourth = stack->tab_a[3];
+	if (first == 0)
+		ft_push_b(stack);
+	else if (second == 0)
+	{
+		ft_rotate_a(stack);
+		ft_push_b(stack);
+	}
+	else if (third == 0)
+	{
+		ft_rotate_a(stack);
+		ft_rotate_a(stack);
+		ft_push_b(stack);
+	}
+	else if (fourth == 0)
+	{
+		ft_reverse_rotate_a(stack);
+		ft_push_b(stack);
+	}
+	ft_three_args(stack);
+	ft_push_a(stack);
+	return (1);
+}
 
 int ft_five_args(t_stack *stack)
 {

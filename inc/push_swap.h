@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:52:43 by aavezou           #+#    #+#             */
-/*   Updated: 2023/01/27 19:22:08 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/30 14:29:51 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ int     ft_handle_negative(t_stack *stack);
 int	    ft_small_arrays(t_stack *stack);
 int	    ft_two_args(t_stack *stack);
 int     ft_three_args(t_stack *stack);
+int     ft_first_part_of_ft_three_args(t_stack *stack);
+int     ft_second_part_of_ft_three_args(t_stack *stack);
 int     ft_five_args(t_stack *stack);
 int	    ft_four_args(t_stack *stack);
 int	    ft_check_one(t_stack *stack);

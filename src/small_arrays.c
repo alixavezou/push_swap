@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:52:13 by alixavezou        #+#    #+#             */
-/*   Updated: 2023/01/27 17:40:22 by aavezou          ###   ########.fr       */
+/*   Updated: 2023/01/30 14:15:47 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,19 @@ int	ft_two_args(t_stack *stack)
 
 int ft_three_args(t_stack *stack)
 {
+    if (stack->size_tab_a != 3)
+        return (0);
+    ft_first_part_of_ft_three_args(stack);
+    ft_second_part_of_ft_three_args(stack);
+    return (1);
+}
+
+int ft_first_part_of_ft_three_args(t_stack *stack)
+{
     int top;
     int middle;
     int bottom;
 
-    if (stack->size_tab_a != 3)
-        return (0);
     top = stack->tab_a[0];
     middle = stack->tab_a[1];
     bottom = stack->tab_a[2];
@@ -55,7 +62,19 @@ int ft_three_args(t_stack *stack)
     }
     else if (top > middle && middle < bottom && top > bottom)
         ft_rotate_a(stack);
-    else if (top < middle && middle > bottom && top < bottom)
+    return (1);
+}
+
+int ft_second_part_of_ft_three_args(t_stack *stack)
+{
+    int top;
+    int middle;
+    int bottom;
+
+    top = stack->tab_a[0];
+    middle = stack->tab_a[1];
+    bottom = stack->tab_a[2];
+    if (top < middle && middle > bottom && top < bottom)
     {
         ft_swap_a(stack);
         ft_rotate_a(stack);
@@ -63,41 +82,4 @@ int ft_three_args(t_stack *stack)
     else if (top < middle && middle > bottom && top > bottom)
         ft_reverse_rotate_a(stack);
     return (1);
-}
-
-int	ft_four_args(t_stack *stack)
-{
-	int	first;
-	int	second;
-	int	third;
-	int	fourth;
-
-	if (stack->size_tab_a != 4)
-        return (0);
-    first = stack->tab_a[0];
-    second = stack->tab_a[1];
-    third = stack->tab_a[2];
-    fourth = stack->tab_a[3];
-	if (first == 0)
-		ft_push_b(stack);
-	else if (second == 0)
-	{
-		ft_rotate_a(stack);
-		ft_push_b(stack);
-	}
-	else if (third == 0)
-	{
-		ft_rotate_a(stack);
-		ft_rotate_a(stack);
-		ft_push_b(stack);
-	}
-	else if (fourth == 0)
-	{
-		ft_reverse_rotate_a(stack);
-		ft_push_b(stack);
-	}
-	ft_three_args(stack);
-	ft_push_a(stack);
-	ft_print_tab(stack->tab_a, stack->size_tab_a, 'a');
-	return (1);
 }
